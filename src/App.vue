@@ -1,26 +1,42 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Sidebar />
+  <Header />
+  <Realtors />
+  <Features />
+  <Story />
+  <StoryContent />
+  <Homes />
+  <Gallery />
+  <Footer />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Sidebar from "./components/SidebarComponent.vue";
+import Header from "./components/HeaderComponent.vue";
+import Realtors from "./components/RealtorsComponent.vue";
+import Features from "./components/FeaturesComponent.vue";
+import Story from "./components/StoryComponent.vue";
+import StoryContent from "./components/StoryContentComponent.vue";
+import Homes from "./components/HomesComponent.vue";
+import Gallery from "./components/GalleryComponent.vue";
+import Footer from "./components/FooterComponent.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Header,
+    Sidebar,
+    Realtors,
+    Features,
+    Story,
+    StoryContent,
+    Homes,
+    Gallery,
+    Footer,
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+@import "@/assets/sass/main.scss";
 </style>
