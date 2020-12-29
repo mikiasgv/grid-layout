@@ -1,5 +1,5 @@
 <template>
-  <section class="gallery"></section>
+  <section class="gallery">Gallery</section>
 </template>
 
 <script>

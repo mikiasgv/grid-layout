@@ -1,5 +1,5 @@
 <template>
-  <div class="story__pictures"></div>
+  <div class="story__pictures">Story Content</div>
 </template>
 
 <script>
