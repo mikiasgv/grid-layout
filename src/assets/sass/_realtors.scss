@@ -33,11 +33,18 @@
     width: 7rem;
     border-radius: 50%;
     display: block;
+    transform: translateX(-150px);
+    z-index: 1;
   }
 
   &__sold {
     text-transform: uppercase;
     color: $color-grey-light-2;
     margin-top: -3px;
+  }
+
+  &__details {
+    transform: translateX(70px);
+    opacity: 0;
   }
 }

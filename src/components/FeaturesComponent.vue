@@ -51,7 +51,28 @@
 </template>
 
 <script>
-export default {};
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+export default {
+  mounted() {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(".feature", {
+    scrollTrigger: {
+        trigger: '.feature',
+        toggleActions: "restart none none none"
+    },
+    x: 30,
+    yoyo: true, 
+    repeat: 1, 
+    ease: "power1.inOut",
+    delay:1,
+    stagger: {
+      grid: "auto",
+      from: "left"
+    }
+  });
+  }
+};
 </script>
 
 <style lang="scss" scoped>

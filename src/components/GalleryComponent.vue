@@ -20,7 +20,27 @@
 </template>
 
 <script>
-export default {};
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+export default {
+  mounted() {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(".gallery__item", 1, {
+    scrollTrigger: '.gallery__item',
+    scale: 0.95, 
+    x: 15,
+    yoyo: true, 
+    repeat: 1, 
+    ease: "power1.inOut",
+    delay:1,
+    stagger: {
+      amount: 1.5, 
+      grid: "auto",
+      from: "center"
+    }
+  });
+  }
+};
 </script>
 
 <style lang="scss" scoped>
